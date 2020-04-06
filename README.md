@@ -1,2 +1,2 @@
-# [futurict2.github.io/fin4-ebook](https://futurict2.github.io/fin4-ebook/)
+# [ebook.finfour.net](https://ebook.finfour.net/)
 Description: Hosting the eBook about FuturICT 2.0 and Finance 4.0
