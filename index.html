@@ -7,9 +7,27 @@
             html * {
                 font-family: ubuntu;
             }
+            /*body {
+                background-image: url("coverPageImage.jpg");
+            }*/
+            body {
+                margin: 0;
+            }
+            .backgroundImageContainer {
+                position: relative;
+                height: 100%;
+            }
+            .backgroundImageContainer:before {
+                background: url("coverPageImage.jpg") center / cover;
+                content: '';
+                position: absolute;
+                left: 0; right: 0; top: 0; bottom: 0;
+                z-index: -1;
+                opacity: 0.2;
+            }
             .heading {
                 font-size: x-large;
-                margin: 50px 0 30px 0;
+                padding: 50px 0 30px 0;
             }
             .navButtonDiv {
                 margin: auto;
@@ -43,28 +61,31 @@
         </style>
     </head>
     <body>
-        <center>
-            <div class="heading">
-                FuturICT 2.0 eBook
-            </div>
-            <a href="desktop">
-                <div class="navButtonDiv F2DarkPink">
-                    <i class="icon fas fa-desktop"></i>
-                    <div>desktop browser</div>
+        <div class="backgroundImageContainer">
+
+            <center>
+                <div class="heading">
+                    FuturICT 2.0 eBook
                 </div>
-            </a>
-            <a href="mobile">
-                <div class="navButtonDiv F2Blue">
-                    <i class="icon fas fa-mobile-alt"></i>
-                    <div>mobile browser</div>
-                </div>
-            </a>
-            <a href="pdf/FuturICT2-eBook.pdf">
-                <div class="navButtonDiv F2DarkViolet">
-                    <i class="icon far fa-file-alt"></i>
-                    <div>PDF</div>
-                </div>
-            </a>
-        </center>
+                <a href="desktop">
+                    <div class="navButtonDiv F2DarkPink">
+                        <i class="icon fas fa-desktop"></i>
+                        <div>desktop browser</div>
+                    </div>
+                </a>
+                <a href="mobile">
+                    <div class="navButtonDiv F2Blue">
+                        <i class="icon fas fa-mobile-alt"></i>
+                        <div>mobile browser</div>
+                    </div>
+                </a>
+                <a href="pdf/FuturICT2-eBook.pdf">
+                    <div class="navButtonDiv F2DarkViolet">
+                        <i class="icon far fa-file-alt"></i>
+                        <div>PDF</div>
+                    </div>
+                </a>
+            </center>
+        </div>
     </body>
 </html>
