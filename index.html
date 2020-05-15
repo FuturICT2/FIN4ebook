@@ -58,6 +58,21 @@
                 font-size: xx-large;
                 margin: 14px 0 8px 0;
             }
+            .citationColor {
+                color: gray;
+            }
+            .citationPrompt {
+                font-size: small;
+                padding: 20px 0 10px 0;
+            }
+            .citationContent {
+                font-size: x-small;
+                font-family: Courier !important;
+            }
+            .copyCitationIcon {
+                font-size: small;
+                padding: 7px 0 0 0;
+            }
         </style>
         <!-- Matomo -->
         <script type="text/javascript">
@@ -77,8 +92,19 @@
         <!-- End Matomo Code -->
     </head>
     <body>
+        <script>
+            function copyToClipboard() {
+                let text = "Helbing, Klauser, and Dapp. 2020. FuturICT 2.0: Towards a Sustainable Digital Society with a Socio-Ecological Finance System (Finance 4.0). ETH Zürich. ebook.finfour.net.";
+                // via https://stackoverflow.com/a/46215202/2474159
+                var input = document.createElement('textarea');
+                input.innerHTML = text;
+                document.body.appendChild(input);
+                input.select();
+                var result = document.execCommand('copy');
+                document.body.removeChild(input);
+            }
+        </script>
         <div class="backgroundImageContainer">
-
             <center>
                 <div class="heading">
                     FuturICT 2.0 eBook
@@ -101,6 +127,19 @@
                         <div>PDF</div>
                     </div>
                 </a>
+                <div class="citationColor" title="Click to copy" onclick="copyToClipboard()">
+                    <div class="citationPrompt">
+                        Please cite as follows:
+                    </div>
+                    <div class="citationContent">
+                        Helbing, Klauser, and Dapp. 2020. FuturICT 2.0:<br/>
+                        Towards a Sustainable Digital Society with a Socio-Ecological Finance System (Finance 4.0).<br/>
+                        ETH Zürich. ebook.finfour.net.
+                    </div>
+                    <div class="copyCitationIcon">
+                        <i class="far fa-copy"></i>
+                    </div>
+                </div>
             </center>
         </div>
     </body>
